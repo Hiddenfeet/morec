@@ -1,38 +1,45 @@
-import { Component, createElement, options } from 'preact';
-import { assign } from './util';
+import {
+    Component,
+    createElement,
+    options
+} from 'preact';
+import {
+    assign
+} from './util';
 
 const oldCatchError = options._catchError;
 options._catchError = function(error, newVNode, oldVNode) {
-	if (error.then) {
-		/** @type {import('./internal').Component} */
-		let component;
-		let vnode = newVNode;
+    if (error.then) {
+        /** @type {import('./internal').Component} */
+        let component;
+        let vnode = newVNode;
 
-		for (; (vnode = vnode._parent); ) {
-			if ((component = vnode._component) && component._childDidSuspend) {
-				// Don't call oldCatchError if we found a Suspense
-				return component._childDidSuspend(error, newVNode._component);
-			}
-		}
-	}
-	oldCatchError(error, newVNode, oldVNode);
+        for (;
+            (vnode = vnode._parent);) {
+            if ((component = vnode._component) && component._childDidSuspend) {
+                // Don't call oldCatchError if we found a Suspense
+                return component._childDidSuspend(error, newVNode._component);
+            }
+        }
+    }
+    oldCatchError(error, newVNode, oldVNode);
 };
 
 function detachedClone(vnode) {
-	if (vnode) {
-		vnode = assign({}, vnode);
-		vnode._component = null;
-		vnode._children = vnode._children && vnode._children.map(detachedClone);
-	}
-	return vnode;
+    if (vnode) {
+        vnode = assign({}, vnode);
+        vnode._component = null;
+        vnode._children = vnode._children && vnode._children.map(detachedClone);
+    }
+    return vnode;
 }
 
 // having custom inheritance instead of a class here saves a lot of bytes
 export function Suspense() {
-	// we do not call super here to golf some bytes...
-	this._pendingSuspensionCount = 0;
-	this._suspenders = null;
-	this._detachOnNextRender = null;
+    // we do not call super here to golf some bytes...
+    this._pendingSuspensionCount = 0;
+    this._suspenders = null;
+    this._detachOnNextRender = null;
 }
 
 // Things we do here to save some bytes but are not proper JS inheritance:
@@ -45,67 +52,71 @@ Suspense.prototype = new Component();
  * @param {Component<any, any>} suspendingComponent The suspending component
  */
 Suspense.prototype._childDidSuspend = function(promise, suspendingComponent) {
-	/** @type {import('./internal').SuspenseComponent} */
-	const c = this;
+    /** @type {import('./internal').SuspenseComponent} */
+    const c = this;
 
-	if (c._suspenders == null) {
-		c._suspenders = [];
-	}
-	c._suspenders.push(suspendingComponent);
+    if (c._suspenders == null) {
+        c._suspenders = [];
+    }
+    c._suspenders.push(suspendingComponent);
 
-	const resolve = suspended(c._vnode);
+    const resolve = suspended(c._vnode);
 
-	let resolved = false;
-	const onResolved = () => {
-		if (resolved) return;
+    let resolved = false;
+    const onResolved = () => {
+        if (resolved) return;
 
-		resolved = true;
+        resolved = true;
 
-		if (resolve) {
-			resolve(onSuspensionComplete);
-		} else {
-			onSuspensionComplete();
-		}
-	};
+        if (resolve) {
+            resolve(onSuspensionComplete);
+        } else {
+            onSuspensionComplete();
+        }
+    };
 
-	suspendingComponent._suspendedComponentWillUnmount =
-		suspendingComponent.componentWillUnmount;
-	suspendingComponent.componentWillUnmount = () => {
-		onResolved();
+    suspendingComponent._suspendedComponentWillUnmount =
+        suspendingComponent.componentWillUnmount;
+    suspendingComponent.componentWillUnmount = () => {
+        onResolved();
 
-		if (suspendingComponent._suspendedComponentWillUnmount) {
-			suspendingComponent._suspendedComponentWillUnmount();
-		}
-	};
+        if (suspendingComponent._suspendedComponentWillUnmount) {
+            suspendingComponent._suspendedComponentWillUnmount();
+        }
+    };
 
-	const onSuspensionComplete = () => {
-		if (!--c._pendingSuspensionCount) {
-			c._vnode._children[0] = c.state._suspended;
-			c.setState({ _suspended: (c._detachOnNextRender = null) });
+    const onSuspensionComplete = () => {
+        if (!--c._pendingSuspensionCount) {
+            c._vnode._children[0] = c.state._suspended;
+            c.setState({
+                _suspended: (c._detachOnNextRender = null)
+            });
 
-			let suspended;
-			while ((suspended = c._suspenders.pop())) {
-				suspended.forceUpdate();
-			}
-		}
-	};
+            let suspended;
+            while ((suspended = c._suspenders.pop())) {
+                suspended.forceUpdate();
+            }
+        }
+    };
 
-	if (!c._pendingSuspensionCount++) {
-		c.setState({ _suspended: (c._detachOnNextRender = c._vnode._children[0]) });
-	}
-	promise.then(onResolved, onResolved);
+    if (!c._pendingSuspensionCount++) {
+        c.setState({
+            _suspended: (c._detachOnNextRender = c._vnode._children[0])
+        });
+    }
+    promise.then(onResolved, onResolved);
 };
 
 Suspense.prototype.render = function(props, state) {
-	if (this._detachOnNextRender) {
-		this._vnode._children[0] = detachedClone(this._detachOnNextRender);
-		this._detachOnNextRender = null;
-	}
+    if (this._detachOnNextRender) {
+        this._vnode._children[0] = detachedClone(this._detachOnNextRender);
+        this._detachOnNextRender = null;
+    }
 
-	return [
-		createElement(Component, null, state._suspended ? null : props.children),
-		state._suspended && props.fallback
-	];
+    return [
+        createElement(Component, null, state._suspended ? null : props.children),
+        state._suspended && props.fallback
+    ];
 };
 
 /**
@@ -126,40 +137,40 @@ Suspense.prototype.render = function(props, state) {
  * @returns {((unsuspend: () => void) => void)?}
  */
 export function suspended(vnode) {
-	let component = vnode._parent._component;
-	return component && component._suspended && component._suspended(vnode);
+    let component = vnode._parent._component;
+    return component && component._suspended && component._suspended(vnode);
 }
 
 export function lazy(loader) {
-	let prom;
-	let component;
-	let error;
+    let prom;
+    let component;
+    let error;
 
-	function Lazy(props) {
-		if (!prom) {
-			prom = loader();
-			prom.then(
-				exports => {
-					component = exports.default || exports;
-				},
-				e => {
-					error = e;
-				}
-			);
-		}
+    function Lazy(props) {
+        if (!prom) {
+            prom = loader();
+            prom.then(
+                exports => {
+                    component = exports.default || exports;
+                },
+                e => {
+                    error = e;
+                }
+            );
+        }
 
-		if (error) {
-			throw error;
-		}
+        if (error) {
+            throw error;
+        }
 
-		if (!component) {
-			throw prom;
-		}
+        if (!component) {
+            throw prom;
+        }
 
-		return createElement(component, props);
-	}
+        return createElement(component, props);
+    }
 
-	Lazy.displayName = 'Lazy';
-	Lazy._forwarded = true;
-	return Lazy;
+    Lazy.displayName = 'Lazy';
+    Lazy._forwarded = true;
+    return Lazy;
 }

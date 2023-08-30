@@ -1,13 +1,17 @@
-import { options } from 'preact';
-import { assign } from './util';
+import {
+    options
+} from 'preact';
+import {
+    assign
+} from './util';
 
 let oldDiffHook = options._diff;
 options._diff = vnode => {
-	if (vnode.type && vnode.type._forwarded && vnode.ref) {
-		vnode.props.ref = vnode.ref;
-		vnode.ref = null;
-	}
-	if (oldDiffHook) oldDiffHook(vnode);
+    if (vnode.type && vnode.type._forwarded && vnode.ref) {
+        vnode.props.ref = vnode.ref;
+        vnode.ref = null;
+    }
+    if (oldDiffHook) oldDiffHook(vnode);
 };
 
 /**
@@ -18,12 +22,12 @@ options._diff = vnode => {
  * @returns {import('./internal').FunctionalComponent}
  */
 export function forwardRef(fn) {
-	function Forwarded(props) {
-		let clone = assign({}, props);
-		delete clone.ref;
-		return fn(clone, props.ref);
-	}
-	Forwarded.prototype.isReactComponent = Forwarded._forwarded = true;
-	Forwarded.displayName = 'ForwardRef(' + (fn.displayName || fn.name) + ')';
-	return Forwarded;
+    function Forwarded(props) {
+        let clone = assign({}, props);
+        delete clone.ref;
+        return fn(clone, props.ref);
+    }
+    Forwarded.prototype.isReactComponent = Forwarded._forwarded = true;
+    Forwarded.displayName = 'ForwardRef(' + (fn.displayName || fn.name) + ')';
+    return Forwarded;
 }

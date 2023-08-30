@@ -1,4 +1,6 @@
-import { _catchError } from './diff/catch-error';
+import {
+    _catchError
+} from './diff/catch-error';
 
 /**
  * The `option` object can potentially contain callback functions
@@ -10,7 +12,7 @@ import { _catchError } from './diff/catch-error';
  * @type {import('./internal').Options}
  */
 const options = {
-	_catchError
+    _catchError
 };
 
 export default options;

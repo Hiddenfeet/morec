@@ -1,32 +1,51 @@
 import {
-	createElement,
-	render as preactRender,
-	cloneElement as preactCloneElement,
-	createRef,
-	Component,
-	createContext,
-	Fragment
+    createElement,
+    render as preactRender,
+    cloneElement as preactCloneElement,
+    createRef,
+    Component,
+    createContext,
+    Fragment
 } from 'preact';
 import {
-	useState,
-	useReducer,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useImperativeHandle,
-	useMemo,
-	useCallback,
-	useContext,
-	useDebugValue
+    useState,
+    useReducer,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useImperativeHandle,
+    useMemo,
+    useCallback,
+    useContext,
+    useDebugValue
 } from 'preact/hooks';
-import { PureComponent } from './PureComponent';
-import { memo } from './memo';
-import { forwardRef } from './forwardRef';
-import { Children } from './Children';
-import { Suspense, lazy } from './suspense';
-import { SuspenseList } from './suspense-list';
-import { createPortal } from './portals';
-import { hydrate, render, REACT_ELEMENT_TYPE } from './render';
+import {
+    PureComponent
+} from './PureComponent';
+import {
+    memo
+} from './memo';
+import {
+    forwardRef
+} from './forwardRef';
+import {
+    Children
+} from './Children';
+import {
+    Suspense,
+    lazy
+} from './suspense';
+import {
+    SuspenseList
+} from './suspense-list';
+import {
+    createPortal
+} from './portals';
+import {
+    hydrate,
+    render,
+    REACT_ELEMENT_TYPE
+} from './render';
 
 const version = '16.8.0'; // trick libraries to think we are react
 
@@ -35,7 +54,7 @@ const version = '16.8.0'; // trick libraries to think we are react
  * @param {import('./internal').VNode["type"]} type The node name or Component constructor
  */
 function createFactory(type) {
-	return createElement.bind(null, type);
+    return createElement.bind(null, type);
 }
 
 /**
@@ -44,7 +63,7 @@ function createFactory(type) {
  * @returns {boolean}
  */
 function isValidElement(element) {
-	return !!element && element.$$typeof === REACT_ELEMENT_TYPE;
+    return !!element && element.$$typeof === REACT_ELEMENT_TYPE;
 }
 
 /**
@@ -55,8 +74,8 @@ function isValidElement(element) {
  * @param {Array<import('./internal').ComponentChildren>} rest Optional component children
  */
 function cloneElement(element) {
-	if (!isValidElement(element)) return element;
-	return preactCloneElement.apply(null, arguments);
+    if (!isValidElement(element)) return element;
+    return preactCloneElement.apply(null, arguments);
 }
 
 /**
@@ -65,11 +84,11 @@ function cloneElement(element) {
  * @returns {boolean}
  */
 function unmountComponentAtNode(container) {
-	if (container._children) {
-		preactRender(null, container);
-		return true;
-	}
-	return false;
+    if (container._children) {
+        preactRender(null, container);
+        return true;
+    }
+    return false;
 }
 
 /**
@@ -78,11 +97,11 @@ function unmountComponentAtNode(container) {
  * @returns {import('./internal').PreactElement | null}
  */
 function findDOMNode(component) {
-	return (
-		(component &&
-			(component.base || (component.nodeType === 1 && component))) ||
-		null
-	);
+    return (
+        (component &&
+            (component.base || (component.nodeType === 1 && component))) ||
+        null
+    );
 }
 
 /**
@@ -97,63 +116,63 @@ const unstable_batchedUpdates = (callback, arg) => callback(arg);
 
 export * from 'preact/hooks';
 export {
-	version,
-	Children,
-	render,
-	hydrate,
-	unmountComponentAtNode,
-	createPortal,
-	createElement,
-	createContext,
-	createFactory,
-	cloneElement,
-	createRef,
-	Fragment,
-	isValidElement,
-	findDOMNode,
-	Component,
-	PureComponent,
-	memo,
-	forwardRef,
-	// eslint-disable-next-line camelcase
-	unstable_batchedUpdates,
-	Suspense,
-	SuspenseList,
-	lazy
+    version,
+    Children,
+    render,
+    hydrate,
+    unmountComponentAtNode,
+    createPortal,
+    createElement,
+    createContext,
+    createFactory,
+    cloneElement,
+    createRef,
+    Fragment,
+    isValidElement,
+    findDOMNode,
+    Component,
+    PureComponent,
+    memo,
+    forwardRef,
+    // eslint-disable-next-line camelcase
+    unstable_batchedUpdates,
+    Suspense,
+    SuspenseList,
+    lazy
 };
 
 // React copies the named exports to the default one.
 export default {
-	useState,
-	useReducer,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useImperativeHandle,
-	useMemo,
-	useCallback,
-	useContext,
-	useDebugValue,
-	version,
-	Children,
-	render,
-	hydrate: render,
-	unmountComponentAtNode,
-	createPortal,
-	createElement,
-	createContext,
-	createFactory,
-	cloneElement,
-	createRef,
-	Fragment,
-	isValidElement,
-	findDOMNode,
-	Component,
-	PureComponent,
-	memo,
-	forwardRef,
-	unstable_batchedUpdates,
-	Suspense,
-	SuspenseList,
-	lazy
+    useState,
+    useReducer,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useImperativeHandle,
+    useMemo,
+    useCallback,
+    useContext,
+    useDebugValue,
+    version,
+    Children,
+    render,
+    hydrate: render,
+    unmountComponentAtNode,
+    createPortal,
+    createElement,
+    createContext,
+    createFactory,
+    cloneElement,
+    createRef,
+    Fragment,
+    isValidElement,
+    findDOMNode,
+    Component,
+    PureComponent,
+    memo,
+    forwardRef,
+    unstable_batchedUpdates,
+    Suspense,
+    SuspenseList,
+    lazy
 };

@@ -1,4 +1,6 @@
 import _ec from "elliptic";
 var EC = _ec.ec;
-export { EC };
+export {
+    EC
+};
 //# sourceMappingURL=elliptic.js.map

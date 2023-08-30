@@ -1,2 +1,526 @@
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}code{font-family:source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace}.App-logo{height:40vmin;pointer-events:none}@media (prefers-reduced-motion:no-preference){.App-logo{-webkit-animation:App-logo-spin 20s linear infinite;animation:App-logo-spin 20s linear infinite}}.App-header{background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:#fff}.App-link{color:#61dafb}@-webkit-keyframes App-logo-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes App-logo-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.App{text-align:center;background-color:#242321;min-height:100vh}*,html{margin:0;padding:0}.button{border:1px solid transparent;border-radius:20px;padding:12px 16px;background-color:#fdc91d;color:#333;font-weight:700}.button__large{border:1px solid #4b4d5a;border-radius:0;padding:16px 24px;background-color:#000;text-decoration:underline;color:#fff;font-size:14px;font-weight:700}.button__counter{border:1px solid #4b4d5a;border-radius:4px;padding:10px 15px;background-color:#383d51;color:#fff;font-weight:700}.button:hover{background-color:#755b05;color:#fdc91d;cursor:pointer;border:1px solid #fdc91d}.header{display:flex;align-items:center;justify-content:space-between;padding:24px 40px 15px}.header__logo{height:40px;object-fit:contain}.header__button,.header__center{display:flex;align-items:center}.header__center>p{margin-right:32px;font-size:16px;font-weight:700}.stakebanner{padding:16px 40px 4px;text-align:left}.stakebanner__title{padding:8px 24px;font-size:14px;color:#fff;background-color:#4d4b46;border-radius:10px}.stakebanner__title>p{color:#9c9c9c;font-weight:700}.stakeheader{padding:4px 40px;text-align:left}.stakeheader__title{padding:16px 24px;font-size:24px;color:#fff;background-color:#4d4b46;border-radius:10px}.stakeheader__title>h1{margin-bottom:16px}.stakeheader__title>h3{margin-bottom:16px;color:#fdc91d}@media only screen and (max-width:620px){.stakeheader__title>h1{font-size:28px;margin-bottom:8px}.stakeheader__title>h3{font-size:20px;margin-bottom:8px}.stakeheader__title>button{font-size:12px}}.stakestats{padding:4px 40px;text-align:left}.stakestats__boxes{display:flex;flex-wrap:wrap;grid-gap:8px;gap:8px;grid-row-gap:8px;row-gap:8px}.stakestats__box{background-color:#4d4b46;border-radius:8px;padding:18px 16px;flex-grow:1}.stakestats__boxTitle{font-size:16px;color:#9c9c9c}.stakestats__boxStat{font-size:28px;font-weight:700;color:#fff}@media only screen and (max-width:1028px){.stakestats__boxStat{font-size:20px}.stakestats__boxTitle{font-size:14px}}.stakebody{text-align:left;padding:4px 40px;min-height:300px}.stakebody__mainBox{background-color:#4d4b46;border-radius:10px;padding:16px 0}.stakebody__title{display:flex;padding:8px 0 0 16px}.stakebody__title>h3{margin:0 16px 12px 0}.stakebody__buttonBar{display:flex;flex-wrap:wrap;justify-content:space-between}.stakebody__sorting{display:flex;margin:0 12px 8px 16px;flex-grow:1}.stakebody__batchStake{display:flex;margin:16px 12px 8px 16px;flex-grow:1;flex-wrap:nowrap;flex-direction:row-reverse}.stakebody__batchStakeButton{border:1px solid transparent;border-radius:20px;background-color:#fdc91d;color:#333}.stakebody__batchStakeButton,.stakebody__batchStakeButtonCounter{padding:12px 16px;font-weight:700;cursor:pointer;flex-grow:1;max-width:150px}.stakebody__batchStakeButtonCounter{border:1px solid #fdc91d;border-radius:20px;background-color:#3c3c3c;color:#fdc91d}.stakebody__batchStake>button{margin-right:16px}.stakebody__sortBox{margin-right:32px}.stakebody__boxes{display:flex;flex-wrap:wrap}.stakebody__box{border:2px solid transparent;border-radius:6px;background-color:#3c3c3c;margin:16px 12px 0;width:22%}.stakebody__boxImg{text-align:center;border-radius:6px 6px 0 0;width:100%}.stakebody__boxText{padding:2px 4px}.stakebody__boxRank{font-size:12px;font-weight:700;color:#fff;text-align:center;background-color:#2486f0;border-radius:4px;padding:2px 0}.stakebody__boxTitle{font-size:16px}.stakebody__boxReward,.stakebody__boxTitle{font-weight:700;color:#fdc91d;padding:4px 0 4px 8px}.stakebody__boxReward{font-size:12px}.stakebody__boxButtons{display:flex;align-items:center;justify-content:space-between;padding:12px 8px 8px}.stakebody__boxCheck{text-align:center;margin-bottom:4px}.stakebody__boxButton{border:1px solid #4b4d5a;border-radius:4px;padding:10px 20px;background-color:#383d51;color:#fff;font-weight:700}.stakebody__boxButtonSingle{flex:1 1;border:1px solid #4b4d5a;border-radius:4px;padding:10px 20px;background-color:#fdc91d;color:#333;font-weight:700;cursor:pointer}.stakebody__boxButtonSingleCounter{flex:1 1;border:1px solid #fdc91d;border-radius:4px;padding:10px 20px;background-color:transparent;color:#fdc91d;font-weight:700;cursor:pointer}.stakebody__boxCounterButton{border:1px solid #4b4d5a;border-radius:4px;padding:10px 18px;background-color:transparent;color:#383d51;font-weight:700}.stakebody__titleButtonCounter{border:1px solid transparent;border-radius:20px;padding:12px 16px;background-color:#fdc91d;color:#333;font-weight:700}.checkbox__container{cursor:pointer}.stakebody__buttonDesc{font-size:12px}.stakebody__sortBox>p{color:#fdc91d;margin-bottom:8px}.stakebody__sortBox>select{padding:4px;border:1px solid #fff;background-color:#242321;color:#fdc91d}.stakebody__title>h3:hover{border-bottom:3px solid #29abe2}.stakebody__title>button{margin-right:8px}.stakebody__batchStakeButton:hover{border:1px solid #fdc91d;background-color:#755b05;color:#fdc91d}.stakebody__batchStakeButton:disabled{border:1px solid #999;background-color:#ccc;color:#666;opacity:.5}.stakebody__batchStakeButtonCounter:hover{background-color:#333}input[type=checkbox]{height:18px;width:18px;border-radius:10px;border:1px #aaa;cursor:pointer}@media only screen and (max-width:1028px){.stakebody__box{width:21%}.stakebody__boxRank{font-size:10px}.stakebody__boxTitle{font-size:14px}.stakebody__boxReward{font-size:12px}}@media only screen and (max-width:800px){.stakebody__box{width:28%}.stakebody__boxRank{font-size:10px}.stakebody__boxTitle{font-size:14px}.stakebody__boxReward{font-size:12px}}@media only screen and (max-width:620px){.stakebody__box{width:40%}.stakebody__boxRank{font-size:10px}.stakebody__boxTitle{font-size:12px}.stakebody__boxReward{font-size:10px}.stakebody__batchStakeButton,.stakebody__batchStakeButtonCounter{font-size:12px}}.footer{display:flex;align-items:center;justify-content:space-between;padding:15px 40px}.footer__logo{margin:32px auto 16px}.footer__img{height:50px}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    .App-logo {
+        -webkit-animation: App-logo-spin 20s linear infinite;
+        animation: App-logo-spin 20s linear infinite
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #fff
+}
+
+.App-link {
+    color: #61dafb
+}
+
+@-webkit-keyframes App-logo-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes App-logo-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+.App {
+    text-align: center;
+    background-color: #242321;
+    min-height: 100vh
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0
+}
+
+.button {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 12px 16px;
+    background-color: #fdc91d;
+    color: #333;
+    font-weight: 700
+}
+
+.button__large {
+    border: 1px solid #4b4d5a;
+    border-radius: 0;
+    padding: 16px 24px;
+    background-color: #000;
+    text-decoration: underline;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.button__counter {
+    border: 1px solid #4b4d5a;
+    border-radius: 4px;
+    padding: 10px 15px;
+    background-color: #383d51;
+    color: #fff;
+    font-weight: 700
+}
+
+.button:hover {
+    background-color: #755b05;
+    color: #fdc91d;
+    cursor: pointer;
+    border: 1px solid #fdc91d
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px 15px
+}
+
+.header__logo {
+    height: 40px;
+    object-fit: contain
+}
+
+.header__button,
+.header__center {
+    display: flex;
+    align-items: center
+}
+
+.header__center>p {
+    margin-right: 32px;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.stakebanner {
+    padding: 16px 40px 4px;
+    text-align: left
+}
+
+.stakebanner__title {
+    padding: 8px 24px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4d4b46;
+    border-radius: 10px
+}
+
+.stakebanner__title>p {
+    color: #9c9c9c;
+    font-weight: 700
+}
+
+.stakeheader {
+    padding: 4px 40px;
+    text-align: left
+}
+
+.stakeheader__title {
+    padding: 16px 24px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #4d4b46;
+    border-radius: 10px
+}
+
+.stakeheader__title>h1 {
+    margin-bottom: 16px
+}
+
+.stakeheader__title>h3 {
+    margin-bottom: 16px;
+    color: #fdc91d
+}
+
+@media only screen and (max-width:620px) {
+    .stakeheader__title>h1 {
+        font-size: 28px;
+        margin-bottom: 8px
+    }
+    .stakeheader__title>h3 {
+        font-size: 20px;
+        margin-bottom: 8px
+    }
+    .stakeheader__title>button {
+        font-size: 12px
+    }
+}
+
+.stakestats {
+    padding: 4px 40px;
+    text-align: left
+}
+
+.stakestats__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 8px;
+    gap: 8px;
+    grid-row-gap: 8px;
+    row-gap: 8px
+}
+
+.stakestats__box {
+    background-color: #4d4b46;
+    border-radius: 8px;
+    padding: 18px 16px;
+    flex-grow: 1
+}
+
+.stakestats__boxTitle {
+    font-size: 16px;
+    color: #9c9c9c
+}
+
+.stakestats__boxStat {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff
+}
+
+@media only screen and (max-width:1028px) {
+    .stakestats__boxStat {
+        font-size: 20px
+    }
+    .stakestats__boxTitle {
+        font-size: 14px
+    }
+}
+
+.stakebody {
+    text-align: left;
+    padding: 4px 40px;
+    min-height: 300px
+}
+
+.stakebody__mainBox {
+    background-color: #4d4b46;
+    border-radius: 10px;
+    padding: 16px 0
+}
+
+.stakebody__title {
+    display: flex;
+    padding: 8px 0 0 16px
+}
+
+.stakebody__title>h3 {
+    margin: 0 16px 12px 0
+}
+
+.stakebody__buttonBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.stakebody__sorting {
+    display: flex;
+    margin: 0 12px 8px 16px;
+    flex-grow: 1
+}
+
+.stakebody__batchStake {
+    display: flex;
+    margin: 16px 12px 8px 16px;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse
+}
+
+.stakebody__batchStakeButton {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #fdc91d;
+    color: #333
+}
+
+.stakebody__batchStakeButton,
+.stakebody__batchStakeButtonCounter {
+    padding: 12px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-grow: 1;
+    max-width: 150px
+}
+
+.stakebody__batchStakeButtonCounter {
+    border: 1px solid #fdc91d;
+    border-radius: 20px;
+    background-color: #3c3c3c;
+    color: #fdc91d
+}
+
+.stakebody__batchStake>button {
+    margin-right: 16px
+}
+
+.stakebody__sortBox {
+    margin-right: 32px
+}
+
+.stakebody__boxes {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.stakebody__box {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: #3c3c3c;
+    margin: 16px 12px 0;
+    width: 22%
+}
+
+.stakebody__boxImg {
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+    width: 100%
+}
+
+.stakebody__boxText {
+    padding: 2px 4px
+}
+
+.stakebody__boxRank {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #2486f0;
+    border-radius: 4px;
+    padding: 2px 0
+}
+
+.stakebody__boxTitle {
+    font-size: 16px
+}
+
+.stakebody__boxReward,
+.stakebody__boxTitle {
+    font-weight: 700;
+    color: #fdc91d;
+    padding: 4px 0 4px 8px
+}
+
+.stakebody__boxReward {
+    font-size: 12px
+}
+
+.stakebody__boxButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 8px
+}
+
+.stakebody__boxCheck {
+    text-align: center;
+    margin-bottom: 4px
+}
+
+.stakebody__boxButton {
+    border: 1px solid #4b4d5a;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #383d51;
+    color: #fff;
+    font-weight: 700
+}
+
+.stakebody__boxButtonSingle {
+    flex: 1 1;
+    border: 1px solid #4b4d5a;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #fdc91d;
+    color: #333;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.stakebody__boxButtonSingleCounter {
+    flex: 1 1;
+    border: 1px solid #fdc91d;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fdc91d;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.stakebody__boxCounterButton {
+    border: 1px solid #4b4d5a;
+    border-radius: 4px;
+    padding: 10px 18px;
+    background-color: transparent;
+    color: #383d51;
+    font-weight: 700
+}
+
+.stakebody__titleButtonCounter {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 12px 16px;
+    background-color: #fdc91d;
+    color: #333;
+    font-weight: 700
+}
+
+.checkbox__container {
+    cursor: pointer
+}
+
+.stakebody__buttonDesc {
+    font-size: 12px
+}
+
+.stakebody__sortBox>p {
+    color: #fdc91d;
+    margin-bottom: 8px
+}
+
+.stakebody__sortBox>select {
+    padding: 4px;
+    border: 1px solid #fff;
+    background-color: #242321;
+    color: #fdc91d
+}
+
+.stakebody__title>h3:hover {
+    border-bottom: 3px solid #29abe2
+}
+
+.stakebody__title>button {
+    margin-right: 8px
+}
+
+.stakebody__batchStakeButton:hover {
+    border: 1px solid #fdc91d;
+    background-color: #755b05;
+    color: #fdc91d
+}
+
+.stakebody__batchStakeButton:disabled {
+    border: 1px solid #999;
+    background-color: #ccc;
+    color: #666;
+    opacity: .5
+}
+
+.stakebody__batchStakeButtonCounter:hover {
+    background-color: #333
+}
+
+input[type=checkbox] {
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    border: 1px #aaa;
+    cursor: pointer
+}
+
+@media only screen and (max-width:1028px) {
+    .stakebody__box {
+        width: 21%
+    }
+    .stakebody__boxRank {
+        font-size: 10px
+    }
+    .stakebody__boxTitle {
+        font-size: 14px
+    }
+    .stakebody__boxReward {
+        font-size: 12px
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .stakebody__box {
+        width: 28%
+    }
+    .stakebody__boxRank {
+        font-size: 10px
+    }
+    .stakebody__boxTitle {
+        font-size: 14px
+    }
+    .stakebody__boxReward {
+        font-size: 12px
+    }
+}
+
+@media only screen and (max-width:620px) {
+    .stakebody__box {
+        width: 40%
+    }
+    .stakebody__boxRank {
+        font-size: 10px
+    }
+    .stakebody__boxTitle {
+        font-size: 12px
+    }
+    .stakebody__boxReward {
+        font-size: 10px
+    }
+    .stakebody__batchStakeButton,
+    .stakebody__batchStakeButtonCounter {
+        font-size: 12px
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px
+}
+
+.footer__logo {
+    margin: 32px auto 16px
+}
+
+.footer__img {
+    height: 50px
+}
+
 /*# sourceMappingURL=main.8f573bdc.chunk.css.map */
