@@ -64,7 +64,7 @@ const StakeBody = params => {
                 return < >
                     <
                     div className = 'stakebody__box' > {
-                        nft.tokenAddress === "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" &&
+                        nft.tokenAddress === "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" &&
                         <
                         img className = "stakebody__boxImg"
                         src = {
@@ -72,7 +72,7 @@ const StakeBody = params => {
                         }
                         alt = "" > < /img>
                     } {
-                        nft.tokenAddress !== "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" &&
+                        nft.tokenAddress !== "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" &&
                             <
                             img className = "stakebody__boxImg"
                         src = {
@@ -111,7 +111,7 @@ const StakeBody = params => {
                 return < >
                     <
                     div className = 'stakebody__box' > {
-                        heldNFT.tokenAddress === "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" &&
+                        heldNFT.tokenAddress === "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" &&
                         <
                         img className = "stakebody__boxImg"
                         src = {
@@ -119,7 +119,7 @@ const StakeBody = params => {
                         }
                         alt = "" > < /img>
                     } {
-                        heldNFT.tokenAddress !== "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" &&
+                        heldNFT.tokenAddress !== "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" &&
                             <
                             img className = "stakebody__boxImg"
                         src = {

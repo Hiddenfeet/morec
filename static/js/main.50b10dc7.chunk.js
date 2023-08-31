@@ -216,11 +216,11 @@
                                     return Object(l.jsx)(l.Fragment, {
                                         children: Object(l.jsxs)("div", {
                                             className: "stakebody__box",
-                                            children: ["0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" === t.tokenAddress && Object(l.jsx)("img", {
+                                            children: ["0xf601FfEA6A76E83921750361E613d82286c4Ad9B" === t.tokenAddress && Object(l.jsx)("img", {
                                                 className: "stakebody__boxImg",
                                                 src: "https://ik-proxy.b-cdn.net/proxy/https://metadata.trooprz.army/series-2/".concat(t.tokenId, ".png"),
                                                 alt: ""
-                                            }), "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" !== t.tokenAddress && Object(l.jsx)("img", {
+                                            }), "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" !== t.tokenAddress && Object(l.jsx)("img", {
                                                 className: "stakebody__boxImg",
                                                 src: "".concat(t.tokenImage),
                                                 alt: ""
@@ -252,11 +252,11 @@
                                     return Object(l.jsx)(l.Fragment, {
                                         children: Object(l.jsxs)("div", {
                                             className: "stakebody__box",
-                                            children: ["0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" === t.tokenAddress && Object(l.jsx)("img", {
+                                            children: ["0xf601FfEA6A76E83921750361E613d82286c4Ad9B" === t.tokenAddress && Object(l.jsx)("img", {
                                                 className: "stakebody__boxImg",
                                                 src: "https://ik-proxy.b-cdn.net/proxy/https://metadata.trooprz.army/series-2/".concat(t.tokenId, ".png"),
                                                 alt: ""
-                                            }), "0x51112Bf32B9a1C64716DF2e6b82e63a04Bd384Fd" !== t.tokenAddress && Object(l.jsx)("img", {
+                                            }), "0xf601FfEA6A76E83921750361E613d82286c4Ad9B" !== t.tokenAddress && Object(l.jsx)("img", {
                                                 className: "stakebody__boxImg",
                                                 src: "".concat(t.tokenImage),
                                                 alt: ""
@@ -312,13 +312,13 @@
                         })
                     })
                 },
-                x = ["0x4c1cea112ff8fe6e9a161e05326cad12ef82fdc9", "0x22552e90d8921eb7e74215cf85a8b1e5f4b20f66", "0x75233b3c8b60b7191704c0f6100850dc769bb857", "0xf8e63021c3d757b63eb53a9124271251a964d572", "0xbd6b9a1a0477d64e99f660b7b7c205f4604e4ff3", "0x51112bf32b9a1c64716df2e6b82e63a04bd384fd", "0xea4df145322ec9dfce037b062b08083141c6af8f", "0x96628048830a499b156abdc04cc169c18c3a17f2", "0xeb850b8f7d00b4faf242888bef7efbf229eb1e41", "0x45958cb5ede8dc9e1a797c1526d4523db1471f15", "0xdccced571dcbc82bbeadf95af20ee4442e21208c", "0x30ab0d8c808ec024365d45a105c559bdf06bcb14", "0x714f995cc3f551fc6e3f3d4c4955c51bbdc8be6f", "0x2fff5fe8a3e13a10509e4297df9d1fdaf1ee7dc4", "0xeb54ea91c92ce404ba7ad7b0ef2e36fd75c889a7", "0xe13a2bf710c4d1fd3a04a85e14489b4d352ca2f0", "0x1fe73d4cc73ea313056e41fe82e58d59d29c6592", "0xf39363abc3434c600e731068fb8d25d4d8b2b668", "0xb72cddd1113b0906f5b82f507ad90c5cc65b22fb", "0x2a1ba5c6474949949e290e9a5e72fe9c631c9ab2", "0x3cde8ea53ae063698334ddf7114b7051400be78b", "0x3ffcb84507c6d5a2b963d5f367feffa496e964c1", "0xa808030692001dd562f437fc676cd63eb232bc2a", "0x8721b9ad32d1c7869f19d62ac4b764e3038cc1d2", "0x7da8e3acda33ffa01396ff00e2c4b36ad899f8ad", "0xf038c0cb2935fb8bf9b6e47bca1df0835f359f92", "0xaa6cb884573c97e0b26f771acc0c5c94f6ae8ffd", "0x939b90c529f0e3a2c187e1b190ca966a95881fde"],
+                x = ["0x4c1cea112ff8fe6e9a161e05326cad12ef82fdc9", "0x22552e90d8921eb7e74215cf85a8b1e5f4b20f66", "0x75233b3c8b60b7191704c0f6100850dc769bb857", "0xf8e63021c3d757b63eb53a9124271251a964d572", "0xbd6b9a1a0477d64e99f660b7b7c205f4604e4ff3", "0xf601FfEA6A76E83921750361E613d82286c4Ad9B", "0xea4df145322ec9dfce037b062b08083141c6af8f", "0x96628048830a499b156abdc04cc169c18c3a17f2", "0xeb850b8f7d00b4faf242888bef7efbf229eb1e41", "0x45958cb5ede8dc9e1a797c1526d4523db1471f15", "0xdccced571dcbc82bbeadf95af20ee4442e21208c", "0x30ab0d8c808ec024365d45a105c559bdf06bcb14", "0x714f995cc3f551fc6e3f3d4c4955c51bbdc8be6f", "0x2fff5fe8a3e13a10509e4297df9d1fdaf1ee7dc4", "0xeb54ea91c92ce404ba7ad7b0ef2e36fd75c889a7", "0xe13a2bf710c4d1fd3a04a85e14489b4d352ca2f0", "0x1fe73d4cc73ea313056e41fe82e58d59d29c6592", "0xf39363abc3434c600e731068fb8d25d4d8b2b668", "0xb72cddd1113b0906f5b82f507ad90c5cc65b22fb", "0x2a1ba5c6474949949e290e9a5e72fe9c631c9ab2", "0x3cde8ea53ae063698334ddf7114b7051400be78b", "0x3ffcb84507c6d5a2b963d5f367feffa496e964c1", "0xa808030692001dd562f437fc676cd63eb232bc2a", "0x8721b9ad32d1c7869f19d62ac4b764e3038cc1d2", "0x7da8e3acda33ffa01396ff00e2c4b36ad899f8ad", "0xf038c0cb2935fb8bf9b6e47bca1df0835f359f92", "0xaa6cb884573c97e0b26f771acc0c5c94f6ae8ffd", "0x939b90c529f0e3a2c187e1b190ca966a95881fde"],
                 w = {
-                    trpzToken: "0x1Cc0B25BD5105CD8905f7e9cD174435D4C890E02",
-                    trpzStake: "0xA588fA62c9722Ea6824851641F3a51545D083e68",
+                    trpzToken: "0x5cB5cbdb7500cf3cd73c9A230f624729Cff217ef",
+                    trpzStake: "0xb0562E53770DB291d779dD40C7122665838a36D9",
                     skillzBoost: "",
                     skillz: "",
-                    Trooprz: "0x51112bf32b9a1c64716df2e6b82e63a04bd384fd",
+                    Trooprz: "0xf601FfEA6A76E83921750361E613d82286c4Ad9B",
                     SuperTrooprz: "0xea4df145322ec9dfce037b062b08083141c6af8f",
                     Mutantz: "0x96628048830a499b156abdc04cc169c18c3a17f2",
                     fraternityFoxes: "0x75233b3c8b60b7191704c0f6100850dc769bb857",
@@ -2640,7 +2640,7 @@
                         "0x75233b3c8b60b7191704c0f6100850dc769bb857": 4,
                         "0xf8e63021c3d757b63eb53a9124271251a964d572": 2,
                         "0xbd6b9a1a0477d64e99f660b7b7c205f4604e4ff3": 2,
-                        "0x51112bf32b9a1c64716df2e6b82e63a04bd384fd": 5,
+                        "0xf601FfEA6A76E83921750361E613d82286c4Ad9B": 1000,
                         "0xea4df145322ec9dfce037b062b08083141c6af8f": 5,
                         "0x96628048830a499b156abdc04cc169c18c3a17f2": 5,
                         "0xeb850b8f7d00b4faf242888bef7efbf229eb1e41": 1,

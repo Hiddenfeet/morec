@@ -32,7 +32,7 @@ export const configVars = {
         "0x75233b3c8b60b7191704c0f6100850dc769bb857",
         "0xf8e63021c3d757b63eb53a9124271251a964d572",
         "0xbd6b9a1a0477d64e99f660b7b7c205f4604e4ff3",
-        "0x51112bf32b9a1c64716df2e6b82e63a04bd384fd",
+        "0xf601FfEA6A76E83921750361E613d82286c4Ad9B",
         "0xea4df145322ec9dfce037b062b08083141c6af8f",
         "0x96628048830a499b156abdc04cc169c18c3a17f2",
         "0xeb850b8f7d00b4faf242888bef7efbf229eb1e41",
@@ -58,11 +58,11 @@ export const configVars = {
 
     ],
     erc20: {
-        trpzToken: "0x1Cc0B25BD5105CD8905f7e9cD174435D4C890E02",
-        trpzStake: "0xA588fA62c9722Ea6824851641F3a51545D083e68",
+        trpzToken: "0x5cB5cbdb7500cf3cd73c9A230f624729Cff217ef",
+        trpzStake: "0xb0562E53770DB291d779dD40C7122665838a36D9",
         skillzBoost: "",
         skillz: "",
-        Trooprz: "0x51112bf32b9a1c64716df2e6b82e63a04bd384fd",
+        Trooprz: "0xf601FfEA6A76E83921750361E613d82286c4Ad9B",
         SuperTrooprz: "0xea4df145322ec9dfce037b062b08083141c6af8f",
         Mutantz: "0x96628048830a499b156abdc04cc169c18c3a17f2",
         fraternityFoxes: "0x75233b3c8b60b7191704c0f6100850dc769bb857",
